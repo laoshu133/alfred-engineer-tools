@@ -1,0 +1,9 @@
+{
+  "name": "com.laoshu133.alfred.dev_tools",
+  "version": "1.0.0",
+  "description": "Engineer tools for Alfred",
+  "main": "index.js",
+  "repository": "https://github.com/laoshu133/alfred.dev_tools",
+  "author": "laoshu133",
+  "license": "MIT"
+}
