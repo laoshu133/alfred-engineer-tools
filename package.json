@@ -1,7 +1,7 @@
 {
  "type": "module",
  "name": "alfred-engineer-tools",
- "version": "1.0.2",
+ "version": "1.1.1",
  "description": "Engineer tools for Alfred",
  "repository": "https://github.com/laoshu133/alfred.dev_tools",
  "author": "laoshu133",
