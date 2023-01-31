@@ -21,6 +21,29 @@
 				<false/>
 			</dict>
 		</array>
+		<key>80729E5B-7FD1-4A2C-8EA4-D13B5AC32AAE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C1CECABC-92EC-4137-8372-CFB5447B6417</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Lookup IP information</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>98C296B2-35E2-4884-B934-5E2150BED602</key>
 		<array>
 			<dict>
@@ -300,6 +323,55 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
+				<string>sha1</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Hashing "{query}"</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1" "sha1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Hash "{query}" to sha1</string>
+				<key>title</key>
+				<string>Hash a string to sha1</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>1F6B195A-F7B1-4B94-98DF-CF97300F0083</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
 				<string>md5</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
@@ -336,6 +408,29 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>tell application "Alfred" to search "ip {query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C1CECABC-92EC-4137-8372-CFB5447B6417</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -345,11 +440,11 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>sha1</string>
+				<string>ip</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -359,17 +454,17 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Hashing "{query}"</string>
+				<string>Loading ip info...</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "$1" "sha1"</string>
+				<string>./node_modules/.bin/run-node index.js "$1" "ip"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Hash "{query}" to sha1</string>
+				<string>Loading ip info...</string>
 				<key>title</key>
-				<string>Hash a string to sha1</string>
+				<string>IP info</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -378,7 +473,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>1F6B195A-F7B1-4B94-98DF-CF97300F0083</string>
+			<string>80729E5B-7FD1-4A2C-8EA4-D13B5AC32AAE</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -390,9 +485,16 @@
 		<key>1F6B195A-F7B1-4B94-98DF-CF97300F0083</key>
 		<dict>
 			<key>xpos</key>
-			<integer>615</integer>
+			<integer>805</integer>
 			<key>ypos</key>
-			<integer>430</integer>
+			<integer>435</integer>
+		</dict>
+		<key>80729E5B-7FD1-4A2C-8EA4-D13B5AC32AAE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>115</integer>
+			<key>ypos</key>
+			<integer>600</integer>
 		</dict>
 		<key>9764BAA7-42F4-4D75-A648-EBEB594B698E</key>
 		<dict>
@@ -415,6 +517,13 @@
 			<key>ypos</key>
 			<integer>65</integer>
 		</dict>
+		<key>C1CECABC-92EC-4137-8372-CFB5447B6417</key>
+		<dict>
+			<key>xpos</key>
+			<integer>375</integer>
+			<key>ypos</key>
+			<integer>595</integer>
+		</dict>
 		<key>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</key>
 		<dict>
 			<key>xpos</key>
@@ -425,9 +534,9 @@
 		<key>EC994862-9204-48EA-9CCB-6E5EE518FFC8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>385</integer>
+			<integer>630</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>445</integer>
 		</dict>
 		<key>FA39133C-889F-4AB2-A22C-A8B78A771E2F</key>
 		<dict>

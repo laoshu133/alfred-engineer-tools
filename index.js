@@ -1,8 +1,11 @@
+import './alfy.fix.js';
 import alfy from 'alfy';
 import utils from './utils.js';
+import alfredNotifier from 'alfred-notifier';
 
-const inpData = String(alfy.input);
+const inpData = String(alfy.input || '');
 const action = process.argv[3] || 'encode';
+const actionExtData = process.argv[4] || '';
 
 const actions = {
     encode() {
@@ -49,6 +52,8 @@ const actions = {
 
         return items;
     },
+
+    // Hash
     md5() {
         const md5Hash = utils.md5(inpData);
 
@@ -72,22 +77,115 @@ const actions = {
             this.md5(),
             this.sha1()
         ];
+    },
+
+    // IP
+    async localIP() {
+        const subtitle = 'Press enter to copy, ⌘Enter to get ip info';
+        const localIP = await utils.getLocalIP();
+        const localIPv6 = await utils.getLocalIP(6);
+        const externalIP = await utils.getExternalIP();
+
+        const items = [
+            {
+                title: `Local IP: ${localIP}`,
+                arg: localIP,
+                subtitle
+            }, {
+                title: `External IP: ${externalIP}`,
+                arg: externalIP,
+                subtitle
+            }
+        ];
+
+        if(localIPv6) {
+            items.push({
+                title: `Local IPv6: ${localIPv6}`,
+                arg: localIPv6,
+                subtitle
+            });
+        }
+
+        return items;
+    },
+    async ipInfo(ip = inpData) {
+        const ipInfo = await utils.ipInfo(ip, actionExtData);
+        const items = [
+            {
+                title: ipInfo.ip || ip,
+                subtitle: 'IP Address'
+            }
+        ];
+
+        const location = [
+            ipInfo.country || '',
+            ipInfo.region || '',
+            ipInfo.city || ''
+        ].join(' ').trim();
+        if(location) {
+            items.push({
+                title: location,
+                subtitle: 'Location'
+            });
+        }
+
+        if(ipInfo.isp) {
+            items.push({
+                title: ipInfo.isp,
+                subtitle: 'ISP'
+            });
+        }
+
+        if(ipInfo.hostname) {
+            items.push({
+                title: ipInfo.hostname,
+                subtitle: 'Hostname'
+            });
+        }
+
+        return items;
+    },
+    async ip() {
+        try {
+            const ip = inpData.trim();
+
+            if(!ip) {
+                return await this.localIP();
+            }
+
+            return await this.ipInfo(ip);
+        }
+        catch(err) {
+            return {
+                title: err.message,
+                subtitle: 'Press enter to copy error stack',
+                arg: err.stack
+            };
+        }
     }
 };
 
-// alfy.log(alfy.meta);
-// alfy.log(alfy.alfred);
+async function main() {
+    let items = [{
+        title: `No ${action} action defeined.`
+    }];
 
-let items = [{
-    title: `No ${action} action defeined.`
-}];
+    if(actions[action]) {
+        items = (await actions[action]()) || [];
 
-if(actions[action]) {
-    items = actions[action]();
-
-    if(!Array.isArray(items)) {
-        items = [ items ];
+        if(!Array.isArray(items)) {
+            items = [ items ];
+        }
     }
+
+    // Debug
+    // items.push({ title: JSON.stringify(alfy.meta) });
+    // items.push({ title: JSON.stringify(alfy.alfred) });
+
+    alfy.output(items);
+
+    // Checks for available update and updates the `info.plist`
+    alfredNotifier();
 }
 
-alfy.output(items);
+main();
