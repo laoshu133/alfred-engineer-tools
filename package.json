@@ -1,9 +1,26 @@
 {
-  "name": "com.laoshu133.alfred.dev_tools",
+  "type": "module",
+  "name": "alfred-engineer-tools",
   "version": "1.0.0",
   "description": "Engineer tools for Alfred",
-  "main": "index.js",
   "repository": "https://github.com/laoshu133/alfred.dev_tools",
   "author": "laoshu133",
-  "license": "MIT"
+  "license": "MIT",
+  "exports": "./index.js",
+  "files": [
+		"src",
+		"index.js",
+		"icon.png",
+		"info.plist"
+	],
+  "scripts": {
+		"postinstall": "alfy-init",
+		"preuninstall": "alfy-cleanup"
+	},
+  "engines": {
+		"node": ">=14.13.1"
+	},
+  "dependencies": {
+    "alfy": "^1.0.0"
+  }
 }
