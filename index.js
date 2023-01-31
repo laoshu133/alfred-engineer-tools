@@ -1,47 +1,8 @@
 import alfy from 'alfy';
+import utils from './utils.js';
 
 const inpData = String(alfy.input);
 const action = process.argv[3] || 'encode';
-
-const utils = {
-    encodeURI(data = '') {
-        return encodeURIComponent(data || '');
-    },
-    decodeURI(str = '') {
-        try {
-            return decodeURIComponent(str || '');
-        }
-        catch(err) {
-            return str || '';
-        }
-    },
-    encodeBase64(data = '') {
-        return Buffer.from(data).toString('base64');
-    },
-    decodeBase64(str = '') {
-        try {
-            // Add removed at end '='
-            str += Array(5 - str.length % 4).join('=');
-
-            str = str
-                // Convert '-' to '+'
-                .replace(/\-/g, '+')
-                // Convert '_' to '/'
-                .replace(/\_/g, '/');
-
-            return Buffer.from(str, 'base64');
-        }
-        catch(err) {
-            return null;
-        }
-    },
-    base64ToURLSafe(str = '') {
-        return str
-            .replace(/\+/g, '-') // Convert '+' to '-'
-            .replace(/\//g, '_') // Convert '/' to '_'
-            .replace(/=+$/, ''); // Remove ending '='
-    }
-};
 
 const actions = {
     encode() {
@@ -87,6 +48,30 @@ const actions = {
         }
 
         return items;
+    },
+    md5() {
+        const md5Hash = utils.md5(inpData);
+
+        return {
+            title: md5Hash,
+            subtitle: 'md5',
+            arg: md5Hash
+        };
+    },
+    sha1() {
+        const sha1Hash = utils.sha1(inpData);
+
+        return {
+            title: sha1Hash,
+            subtitle: 'sha1',
+            arg: sha1Hash
+        };
+    },
+    hash() {
+        return [
+            this.md5(),
+            this.sha1()
+        ];
     }
 };
 
@@ -99,6 +84,10 @@ let items = [{
 
 if(actions[action]) {
     items = actions[action]();
+
+    if(!Array.isArray(items)) {
+        items = [ items ];
+    }
 }
 
 alfy.output(items);

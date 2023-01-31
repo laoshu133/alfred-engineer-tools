@@ -8,6 +8,19 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>1F6B195A-F7B1-4B94-98DF-CF97300F0083</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>98C296B2-35E2-4884-B934-5E2150BED602</key>
 		<array>
 			<dict>
@@ -39,6 +52,32 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>9764BAA7-42F4-4D75-A648-EBEB594B698E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EC994862-9204-48EA-9CCB-6E5EE518FFC8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FA39133C-889F-4AB2-A22C-A8B78A771E2F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -196,38 +235,206 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>hash</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Hashing "{query}"</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1" "hash"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Hash "{query}"</string>
+				<key>title</key>
+				<string>Hash a string</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>FA39133C-889F-4AB2-A22C-A8B78A771E2F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>md5</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Hashing "{query}"</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1" "md5"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Hash "{query}" to md5</string>
+				<key>title</key>
+				<string>Hash a string to md5</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>EC994862-9204-48EA-9CCB-6E5EE518FFC8</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>sha1</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Hashing "{query}"</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1" "sha1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Hash "{query}" to sha1</string>
+				<key>title</key>
+				<string>Hash a string to sha1</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>1F6B195A-F7B1-4B94-98DF-CF97300F0083</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Have fun.</string>
 	<key>uidata</key>
 	<dict>
+		<key>1F6B195A-F7B1-4B94-98DF-CF97300F0083</key>
+		<dict>
+			<key>xpos</key>
+			<integer>630</integer>
+			<key>ypos</key>
+			<integer>495</integer>
+		</dict>
 		<key>9764BAA7-42F4-4D75-A648-EBEB594B698E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>595</integer>
+			<integer>1055</integer>
 			<key>ypos</key>
-			<integer>125</integer>
+			<integer>120</integer>
 		</dict>
 		<key>98C296B2-35E2-4884-B934-5E2150BED602</key>
 		<dict>
 			<key>xpos</key>
-			<integer>125</integer>
+			<integer>120</integer>
 			<key>ypos</key>
-			<integer>285</integer>
+			<integer>290</integer>
 		</dict>
 		<key>9ECC482E-B54E-416B-9587-E0B884DA029B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>120</integer>
+			<integer>115</integer>
 			<key>ypos</key>
-			<integer>125</integer>
+			<integer>130</integer>
 		</dict>
 		<key>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>385</integer>
+			<integer>845</integer>
 			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
+		<key>EC994862-9204-48EA-9CCB-6E5EE518FFC8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>490</integer>
+		</dict>
+		<key>FA39133C-889F-4AB2-A22C-A8B78A771E2F</key>
+		<dict>
+			<key>xpos</key>
 			<integer>125</integer>
+			<key>ypos</key>
+			<integer>490</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
