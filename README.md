@@ -16,6 +16,14 @@ In Alfred, type `encode` or `decode` or `hash` and your query, then press<kbd>En
 
 ## CHANGELOG
 
+## v1.2.1
+
+- feat: Add uuid action support
+
+## v1.2.0
+
+- feat: Add ip action support
+
 ## v1.1.0
 
 - feat: Add hash,md5,sha1 support
