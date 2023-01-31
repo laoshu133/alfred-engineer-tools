@@ -8,6 +8,25 @@ const action = process.argv[3] || 'encode';
 const actionExtData = process.argv[4] || '';
 
 const actions = {
+    // UUID
+    uuid() {
+        const uuid = utils.uuid();
+        const uuidUp = uuid.replace(/-/g, '').toUpperCase();
+
+        return [
+            {
+                title: uuid,
+                subtitle: 'UUID v4',
+                arg: uuid
+            }, {
+                title: uuidUp,
+                subtitle: 'UUID v4 with upper',
+                arg: uuidUp
+            }
+        ];
+    },
+
+    // Codec
     encode() {
         const base64 = utils.encodeBase64(inpData);
         const safeBase64 = utils.base64ToURLSafe(base64);

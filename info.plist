@@ -44,6 +44,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>87372CB0-C244-4E09-906D-F56A4B88CDC0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>98C296B2-35E2-4884-B934-5E2150BED602</key>
 		<array>
 			<dict>
@@ -120,6 +133,55 @@
 	<string>Engineer tools for Alfred</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>uuid</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Generate UUID v4...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1" "uuid"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Generate UUID v4...</string>
+				<key>title</key>
+				<string>UUID v4</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>87372CB0-C244-4E09-906D-F56A4B88CDC0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -485,65 +547,72 @@
 		<key>1F6B195A-F7B1-4B94-98DF-CF97300F0083</key>
 		<dict>
 			<key>xpos</key>
-			<integer>805</integer>
+			<integer>760</integer>
 			<key>ypos</key>
-			<integer>435</integer>
+			<integer>580</integer>
 		</dict>
 		<key>80729E5B-7FD1-4A2C-8EA4-D13B5AC32AAE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>115</integer>
+			<integer>70</integer>
 			<key>ypos</key>
-			<integer>600</integer>
+			<integer>745</integer>
+		</dict>
+		<key>87372CB0-C244-4E09-906D-F56A4B88CDC0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>55</integer>
 		</dict>
 		<key>9764BAA7-42F4-4D75-A648-EBEB594B698E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1040</integer>
+			<integer>995</integer>
 			<key>ypos</key>
-			<integer>55</integer>
+			<integer>200</integer>
 		</dict>
 		<key>98C296B2-35E2-4884-B934-5E2150BED602</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>225</integer>
+			<integer>370</integer>
 		</dict>
 		<key>9ECC482E-B54E-416B-9587-E0B884DA029B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>100</integer>
+			<integer>55</integer>
 			<key>ypos</key>
-			<integer>65</integer>
+			<integer>210</integer>
 		</dict>
 		<key>C1CECABC-92EC-4137-8372-CFB5447B6417</key>
 		<dict>
 			<key>xpos</key>
-			<integer>375</integer>
+			<integer>330</integer>
 			<key>ypos</key>
-			<integer>595</integer>
+			<integer>740</integer>
 		</dict>
 		<key>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>830</integer>
+			<integer>785</integer>
 			<key>ypos</key>
-			<integer>55</integer>
+			<integer>200</integer>
 		</dict>
 		<key>EC994862-9204-48EA-9CCB-6E5EE518FFC8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>630</integer>
+			<integer>585</integer>
 			<key>ypos</key>
-			<integer>445</integer>
+			<integer>590</integer>
 		</dict>
 		<key>FA39133C-889F-4AB2-A22C-A8B78A771E2F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>110</integer>
+			<integer>65</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>570</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

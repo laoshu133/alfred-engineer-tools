@@ -5,10 +5,16 @@
 import dns from 'dns';
 import net from 'net';
 import alfy from 'alfy';
-import crypto from 'crypto';
+import { createHash, randomUUID } from 'crypto';
 import { exec } from 'child-process-promise';
 
 const utils = {
+    // UUID
+    uuid() {
+        return randomUUID();
+    },
+
+    // Codec
     encodeURI(data = '') {
         return encodeURIComponent(data || '');
     },
@@ -56,7 +62,7 @@ const utils = {
             data = Buffer.from(data, 'utf8');
         }
 
-        return crypto.createHash(method)
+        return createHash(method)
             .update(data)
             .digest('hex');
     },
