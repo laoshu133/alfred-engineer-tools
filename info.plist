@@ -34,9 +34,22 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9764BAA7-42F4-4D75-A648-EBEB594B698E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Laoshu133</string>
+	<string>Xiaomi</string>
 	<key>description</key>
 	<string>Many collections of engineer tools, such as codec, IP query, etc.</string>
 	<key>disabled</key>
@@ -45,6 +58,27 @@
 	<string>Engineer tools for Alfred</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Added to Clipboard</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>9764BAA7-42F4-4D75-A648-EBEB594B698E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -167,29 +201,36 @@
 	<string>Have fun.</string>
 	<key>uidata</key>
 	<dict>
+		<key>9764BAA7-42F4-4D75-A648-EBEB594B698E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>595</integer>
+			<key>ypos</key>
+			<integer>125</integer>
+		</dict>
 		<key>98C296B2-35E2-4884-B934-5E2150BED602</key>
 		<dict>
 			<key>xpos</key>
-			<integer>135</integer>
+			<integer>125</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>285</integer>
 		</dict>
 		<key>9ECC482E-B54E-416B-9587-E0B884DA029B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>130</integer>
+			<integer>120</integer>
 			<key>ypos</key>
-			<integer>240</integer>
+			<integer>125</integer>
 		</dict>
 		<key>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>400</integer>
+			<integer>385</integer>
 			<key>ypos</key>
-			<integer>240</integer>
+			<integer>125</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>http://www.laoshu133.com</string>
+	<string>https://www.laoshu133.com</string>
 </dict>
 </plist>
