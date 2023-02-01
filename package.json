@@ -3,7 +3,7 @@
  "name": "alfred-engineer-tools",
  "version": "1.2.1",
  "description": "Engineer tools for Alfred",
- "repository": "https://github.com/laoshu133/alfred.dev_tools",
+ "repository": "https://github.com/laoshu133/alfred-engineer-tools",
  "author": "laoshu133",
  "license": "MIT",
  "exports": "./index.js",
