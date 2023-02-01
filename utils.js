@@ -99,6 +99,7 @@ const utils = {
         return promise;
     },
     async getLocalIP(family = 4) {
+        // https://github.com/alexchantastic/alfred-ip-address-workflow
         const ipv4Cmd = `ifconfig | grep 'inet.*broadcast' -m 1 | awk '{print $2}'`;
         const ipv6Cmd = `ifconfig | grep 'inet6.*%en' -m 1 | awk '{print $2}' | sed 's/%en*//'`;
 
