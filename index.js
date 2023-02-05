@@ -58,6 +58,23 @@ const actions = {
             }
         ];
 
+        // Hex, Unicode: \x4A\x{61}\u7a7a\u{6c14}
+        const rHex = /\\([xu]){?([A-F0-9]{2,4})}?/ig;
+        const hexDeStr = inpData.replace(rHex, (a, r, n) => {
+            const hex = n.padStart(r === 'u' ? 4 : 2, '0');
+            const point = parseInt(hex, 16) || 0;
+
+            return point > 0 ? String.fromCodePoint(point) : a;
+        });
+
+        if(hexDeStr !== inpData) {
+            items.unshift({
+                title: hexDeStr,
+                subtitle: 'HEX/Unicode decoded',
+                arg: hexDeStr
+            });
+        }
+
         const base64Decoded = utils.decodeBase64(inpData);
         if(base64Decoded) {
             const base64Str = base64Decoded.toString();
