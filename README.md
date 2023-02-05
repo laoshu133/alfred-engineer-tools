@@ -16,6 +16,11 @@ In Alfred, type `encode` or `decode` or `hash` and your query, then press<kbd>En
 
 ## CHANGELOG
 
+## v1.3.0
+
+- feat: Add Hex, Unicode decode support
+- feat: Add hotkey trigger to decode and encode
+
 ## v1.2.1
 
 - feat: Add uuid action support
