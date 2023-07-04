@@ -12,6 +12,7 @@ const actions = {
     uuid() {
         const uuid = utils.uuid();
         const uuidUp = uuid.replace(/-/g, '').toUpperCase();
+        const typeid = utils.typeid();
 
         return [
             {
@@ -22,6 +23,22 @@ const actions = {
                 title: uuidUp,
                 subtitle: 'UUID v4 with upper',
                 arg: uuidUp
+            }, {
+                title: typeid,
+                subtitle: 'TypeID(UUIDv7)',
+                arg: typeid
+            }
+        ];
+    },
+    // TypeID
+    typeid() {
+        const typeid = utils.typeid(inpData);
+
+        return [
+            {
+                title: typeid,
+                subtitle: 'TypeID(UUIDv7)',
+                arg: typeid
             }
         ];
     },
@@ -83,6 +100,15 @@ const actions = {
                 title: base64Str,
                 subtitle: 'Base64 decoded',
                 arg: base64Str
+            });
+        }
+
+        const typeidDecoded = utils.decodeTypeID(inpData);
+        if (typeidDecoded) {
+            items.push({
+                title: typeidDecoded,
+                subtitle: 'TypeID decoded',
+                arg: typeidDecoded
             });
         }
 

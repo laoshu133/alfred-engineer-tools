@@ -289,6 +289,11 @@ color-name@1.1.3:
   resolved "https://registry.npmmirror.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha512-72fSenhMw2HZMTVHeCA9KCmpEIbzWiQsjN+BHcBbS9vr1mtt+vJjPdksIBNUmKAW8TFUDPJK5SUU3QhE9NEXDw==
 
+commander@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.npmmirror.com/commander/-/commander-11.0.0.tgz#43e19c25dbedc8256203538e8d7e9346877a6f67"
+  integrity sha512-9HMlXtt/BNoYr8ooyjjNRdIilOTkVJXB+GhxMTtOKwk0R4j4lS4NpjuqmRxroBfnfTSHQIHQB7wryHhXarNjmQ==
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmmirror.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -1608,6 +1613,11 @@ timed-out@^4.0.0:
   resolved "https://registry.npmmirror.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
   integrity sha512-G7r3AhovYtr5YKOWQkta8RKAPb+J9IsO4uVmzjl8AZwfhs8UcUwTiD6gcJYSgOtzyjvQKrKYn41syHbUWMkafA==
 
+tslib@~2.5:
+  version "2.5.3"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.5.3.tgz#24944ba2d990940e6e982c4bea147aba80209913"
+  integrity sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==
+
 type-fest@^0.4.1:
   version "0.4.1"
   resolved "https://registry.npmmirror.com/type-fest/-/type-fest-0.4.1.tgz#8bdf77743385d8a4f13ba95f610f5ccd68c728f8"
@@ -1617,6 +1627,15 @@ type-fest@^2.0.0, type-fest@^2.11.2, type-fest@^2.5.0:
   version "2.19.0"
   resolved "https://registry.npmmirror.com/type-fest/-/type-fest-2.19.0.tgz#88068015bb33036a598b952e55e9311a60fd3a9b"
   integrity sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==
+
+typeid-ts@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.npmmirror.com/typeid-ts/-/typeid-ts-0.2.5.tgz#65d475125abf4c90cb9c660d4e392da96f63b1b7"
+  integrity sha512-SbtAal688iSgdiQwujU+JeNUjWh9QBAeMj5vCpOcj+lLdYgELk8inE7bys2NtzYjcUIXZnIox7DG1t038GnN4w==
+  dependencies:
+    commander "^11.0.0"
+    tslib "~2.5"
+    uuidv7 "^0.5.2"
 
 untildify@^3.0.2:
   version "3.0.3"
@@ -1648,6 +1667,11 @@ user-home@^2.0.0:
   integrity sha512-KMWqdlOcjCYdtIJpicDSFBQ8nFwS2i9sslAd6f4+CBGcU4gist2REnr2fxj2YocvJFxSF3ZOHLYLVZnUxv4BZQ==
   dependencies:
     os-homedir "^1.0.0"
+
+uuidv7@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.npmmirror.com/uuidv7/-/uuidv7-0.5.2.tgz#0e23b9402448e234ca20f3b2bf1440f115e97531"
+  integrity sha512-wiUPiWpJyLLWiQV5o5IDAoHOp7DPPniMckxcHKmAAWDX9JOOtMemGU9C5JYOibvLJRAijvMN6nV/OnHLrmZcuA==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"

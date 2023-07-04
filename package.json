@@ -23,6 +23,7 @@
  "dependencies": {
   "alfred-notifier": "^0.2.3",
   "alfy": "^1.1.0",
-  "child-process-promise": "^2.2.1"
+  "child-process-promise": "^2.2.1",
+  "typeid-ts": "^0.2.5"
  }
 }

@@ -5,6 +5,7 @@
 import dns from 'dns';
 import net from 'net';
 import alfy from 'alfy';
+import { typeid, decodeFromString } from 'typeid-ts';
 import { createHash, randomUUID } from 'crypto';
 import { exec } from 'child-process-promise';
 
@@ -12,6 +13,27 @@ const utils = {
     // UUID
     uuid() {
         return randomUUID();
+    },
+
+    // TypeID
+    typeid(prefix = '') {
+        return typeid(prefix).replace(/^_+/, '');
+    },
+    decodeTypeID(typeid = '') {
+        try {
+            if (!/^[A-Z]+_/i.test(typeid)) {
+                typeid = '_' + typeid;
+            }
+
+            // from: x_1g64w3jc1ncgr2tcsh6mrjtdsn
+            // to: {"type":"x","uuid":"30313839-3035-6430-2d33-3135312d3735"}
+            const data = decodeFromString(typeid);
+
+            return JSON.stringify(data);
+        }
+        catch(err) {
+            return null;
+        }
     },
 
     // Codec
