@@ -34,15 +34,28 @@ const actions = {
     },
     // TypeID
     typeid() {
-        const typeid = utils.typeid(inpData);
+        const items = [];
 
-        return [
-            {
+        const typeidDecoded = utils.decodeTypeID(inpData);
+        if (typeidDecoded) {
+            items.push({
+                title: typeidDecoded,
+                subtitle: 'TypeID decoded',
+                arg: typeidDecoded
+            });
+        }
+
+        if (!typeidDecoded) {
+            const typeid = utils.typeid(inpData);
+
+            items.push({
                 title: typeid,
                 subtitle: 'TypeID(UUIDv7)',
                 arg: typeid
-            }
-        ];
+            });
+        }
+
+        return items;
     },
 
     // Format or parse bytes(filesize)

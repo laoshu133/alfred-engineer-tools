@@ -19,7 +19,7 @@ In Alfred, type action(eg. `encode`) and your query, then press<kbd>Enter</kbd> 
 - `encode` - Support URLEncode, base64Encode
 - `decode` - Support URLDecode, base64Decode, HEX/Unicode, TypeID decoded
 - `uuid` - Support UUIDv4, TypeID(UUIDv7)
-- `typeid` - Support TypeID(UUIDv7)
+- `typeid` - Encode or decode TypeID(UUIDv7)
 - `hash` - Support md5, sha1
 - `fs` - Format or parse bytes(filesize)
 - `ip` - Lookup IP info
