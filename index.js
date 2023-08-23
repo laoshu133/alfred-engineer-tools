@@ -1,5 +1,6 @@
 import './alfy.fix.js';
 import alfy from 'alfy';
+import bytes from 'bytes';
 import utils from './utils.js';
 import alfredNotifier from 'alfred-notifier';
 
@@ -39,6 +40,31 @@ const actions = {
                 title: typeid,
                 subtitle: 'TypeID(UUIDv7)',
                 arg: typeid
+            }
+        ];
+    },
+
+    // Format or parse bytes(filesize)
+    bytes() {
+        if (isFinite(inpData)) {
+            const output = bytes.format(+inpData || 0);
+
+            return [
+                {
+                    title: output,
+                    subtitle: 'bytes formated',
+                    arg: output
+                }
+            ];
+        }
+
+        const output = bytes.parse(inpData);
+
+        return [
+            {
+                title: output,
+                subtitle: 'bytes pasred',
+                arg: output
             }
         ];
     },

@@ -122,6 +122,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>A36D9556-BAB2-4CB0-8CBC-23A6AD7ADCDB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</key>
 		<array>
 			<dict>
@@ -273,6 +286,55 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>fs</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Format or parse bytes(filesize)</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1" "bytes"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Format or parse bytes(filesize)</string>
+				<key>title</key>
+				<string>Format or parse bytes(filesize)</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A36D9556-BAB2-4CB0-8CBC-23A6AD7ADCDB</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -294,25 +356,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -324,11 +367,11 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>14</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>524288</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>E</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -395,6 +438,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -406,11 +468,11 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>14</integer>
+				<integer>2</integer>
 				<key>hotmod</key>
-				<integer>524288</integer>
+				<integer>655360</integer>
 				<key>hotstring</key>
-				<string>E</string>
+				<string>D</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -703,91 +765,98 @@
 			<key>xpos</key>
 			<integer>1070</integer>
 			<key>ypos</key>
-			<integer>680</integer>
+			<integer>815</integer>
 		</dict>
 		<key>468B9D20-8585-4FE1-B4CC-ACCF7415FDA1</key>
 		<dict>
 			<key>xpos</key>
 			<integer>60</integer>
 			<key>ypos</key>
-			<integer>470</integer>
+			<integer>605</integer>
 		</dict>
 		<key>6AC3EB5E-3023-4BCE-AB4F-E04600A56296</key>
 		<dict>
 			<key>xpos</key>
 			<integer>365</integer>
 			<key>ypos</key>
-			<integer>185</integer>
+			<integer>165</integer>
 		</dict>
 		<key>80729E5B-7FD1-4A2C-8EA4-D13B5AC32AAE</key>
 		<dict>
 			<key>xpos</key>
 			<integer>380</integer>
 			<key>ypos</key>
-			<integer>845</integer>
+			<integer>980</integer>
 		</dict>
 		<key>87372CB0-C244-4E09-906D-F56A4B88CDC0</key>
 		<dict>
 			<key>xpos</key>
 			<integer>360</integer>
 			<key>ypos</key>
-			<integer>55</integer>
+			<integer>35</integer>
 		</dict>
 		<key>9082307E-994D-4494-9B2D-CCB2ADD0CEC8</key>
 		<dict>
 			<key>xpos</key>
 			<integer>60</integer>
 			<key>ypos</key>
-			<integer>310</integer>
+			<integer>445</integer>
 		</dict>
 		<key>9764BAA7-42F4-4D75-A648-EBEB594B698E</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1305</integer>
 			<key>ypos</key>
-			<integer>300</integer>
+			<integer>435</integer>
 		</dict>
 		<key>98C296B2-35E2-4884-B934-5E2150BED602</key>
 		<dict>
 			<key>xpos</key>
 			<integer>370</integer>
 			<key>ypos</key>
-			<integer>470</integer>
+			<integer>605</integer>
 		</dict>
 		<key>9ECC482E-B54E-416B-9587-E0B884DA029B</key>
 		<dict>
 			<key>xpos</key>
 			<integer>365</integer>
 			<key>ypos</key>
-			<integer>310</integer>
+			<integer>445</integer>
+		</dict>
+		<key>A36D9556-BAB2-4CB0-8CBC-23A6AD7ADCDB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>365</integer>
+			<key>ypos</key>
+			<integer>305</integer>
 		</dict>
 		<key>C1CECABC-92EC-4137-8372-CFB5447B6417</key>
 		<dict>
 			<key>xpos</key>
 			<integer>640</integer>
 			<key>ypos</key>
-			<integer>840</integer>
+			<integer>975</integer>
 		</dict>
 		<key>C2E100BC-AAC1-406C-A243-FB8B3AD5C8DC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1095</integer>
+			<integer>1100</integer>
 			<key>ypos</key>
-			<integer>305</integer>
+			<integer>450</integer>
 		</dict>
 		<key>EC994862-9204-48EA-9CCB-6E5EE518FFC8</key>
 		<dict>
 			<key>xpos</key>
 			<integer>895</integer>
 			<key>ypos</key>
-			<integer>690</integer>
+			<integer>825</integer>
 		</dict>
 		<key>FA39133C-889F-4AB2-A22C-A8B78A771E2F</key>
 		<dict>
 			<key>xpos</key>
 			<integer>375</integer>
 			<key>ypos</key>
-			<integer>670</integer>
+			<integer>805</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
