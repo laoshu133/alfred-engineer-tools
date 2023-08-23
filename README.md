@@ -12,9 +12,25 @@ npm install --global alfred-engineer-tools
 
 ## Usage
 
-In Alfred, type `encode` or `decode` or `hash` and your query, then press<kbd>Enter</kbd> to copy result.
+In Alfred, type action(eg. `encode`) and your query, then press<kbd>Enter</kbd> to copy result.
+
+### Actions
+
+- `encode` - Support URLEncode, base64Encode
+- `decode` - Support URLDecode, base64Decode
+- `hash` - Support md5, sha1
+- `uuid` - Support UUIDv4, TypeID(UUIDv7)
+- `typeid` - Support TypeID(UUIDv7)
+- `fs` - Format or parse bytes(filesize)
+- `ip` - Lookup IP info
+
+
 
 ## CHANGELOG
+
+## v1.5.0
+
+- feat: feat: Add Format or parse bytes(filesize) support
 
 ## v1.4.0
 
