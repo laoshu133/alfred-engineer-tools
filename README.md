@@ -21,9 +21,9 @@ In Alfred, type action(eg. `encode`) and your query, then press<kbd>Enter</kbd> 
 - `uuid` - Support UUIDv4, TypeID(UUIDv7)
 - `typeid` - Encode or decode TypeID(UUIDv7)
 - `hash` - Support md5, sha1
+- `df` - Parse or format timestamp, datetime string, now support
 - `fs` - Format or parse bytes(filesize)
 - `ip` - Lookup IP info
-
 
 
 ## CHANGELOG
