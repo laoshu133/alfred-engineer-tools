@@ -1,6 +1,7 @@
 import './alfy.fix.js';
 import alfy from 'alfy';
 import bytes from 'bytes';
+import dayjs from 'dayjs';
 import utils from './utils.js';
 import alfredNotifier from 'alfred-notifier';
 
@@ -164,6 +165,37 @@ const actions = {
         return [
             this.md5(),
             this.sha1()
+        ];
+    },
+
+    // Datetime
+    datetime() {
+        const timestamp = +inpData || 0;
+        const date = inpData && inpData !== 'now'
+            ? dayjs(timestamp > 0 ? timestamp : inpData)
+            : dayjs();
+
+        const unixSecs = date.unix();
+        const ms = date.valueOf();
+        const f1 = date.format('YYYY-MM-DD HH:mm:ss');
+        // const f2 = date.$d.toString();
+        const f3 = date.$d.toUTCString();
+        const f4 = date.$d.toISOString();
+
+        return [
+            {
+                title: unixSecs,
+                subtitle: 'UTC Timestamp',
+                arg: unixSecs
+            }, {
+                title: ms,
+                subtitle: 'UTC Timestamp in milliseconds',
+                arg: ms
+            },
+            { title: f1, arg: f1 },
+            // { title: f2, arg: f2 },
+            { title: f3, arg: f3 },
+            { title: f4, arg: f4 }
         ];
     },
 
